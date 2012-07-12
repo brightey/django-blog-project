@@ -1,11 +1,13 @@
 # Django settings for myblog project.
 import dj_database_url
+import os
+SITE_ROOT = os.path.dirname(os.path.realpath(__file__))
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
-    # ('Sraku Bright', 'srakubright@yaho.com'),
+    # ('Sraku Bright', 'srakubright@yahoo.com'),
 )
 
 MANAGERS = ADMINS
@@ -103,6 +105,7 @@ ROOT_URLCONF = 'myblog.urls'
 WSGI_APPLICATION = 'myblog.wsgi.application'
 
 TEMPLATE_DIRS = (
+	os.path.join(SITE_ROOT,'templates'),
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.

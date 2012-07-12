@@ -1,0 +1,14 @@
+{%extends "blog/base.html"%}
+{% block content %}
+
+{% for post in posts  %}
+<h2> <a href="/blog/posts/{{ post.id }}/True""> {{ post.title }} </a> </h2>
+
+	 
+		<ul>
+			<li>the date of posting is                       {{post.date_created}}  </li>
+			<li>the last update was {{post.last_update}}  </li>
+			<li> {{post.body_first_60}}  </li>
+		</ul>   
+{% endfor %}
+{% endblock %}

@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+{% block content %}
+{%for s in posts%}
+ <a href="/bog/posts/{{s.id}}/True"><h3>{{s}}</h3> </a><br/>
+
+{% endfor %}
+
+{% endblock %} 
